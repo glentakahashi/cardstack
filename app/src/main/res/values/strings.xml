@@ -2,7 +2,9 @@
 <resources>
 
     <string name="app_name">CardStack</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="menu_reset">Reset</string>
+    <string name="menu_reset_pos">Reset</string>
+    <string name="menu_reset_neg">Cancel</string>
+    <string name="flip_button">Flip</string>
 
 </resources>
