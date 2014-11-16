@@ -10,7 +10,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.common.primitives.Ints;
+
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -36,14 +39,14 @@ public class CardStack extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card_stack);
-        this.rolls = fisherYates(baseRolls);
+        reset();
         final TextView rollView = (TextView) findViewById(R.id.flippedCardsTextView);
         Button b = (Button) findViewById(R.id.flipButton);
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(rolls.size() == 0) {
-                    rolls = fisherYates(baseRolls);
+                    reset();
                     rollView.setText("Deck finished, shuffling!\n" + rollView.getText());
                 }
                 rollView.setText(rolls.remove(0) + "\n" + rollView.getText());
@@ -51,19 +54,21 @@ public class CardStack extends Activity {
         });
     }
 
-    private List<Integer> fisherYates(final int[] baseRolls) {
+    private void reset() {
+        this.rolls = new ArrayList<Integer>(Ints.asList(baseRolls));
+        fisherYates(rolls, 5);
+    }
+
+    private void fisherYates(List<Integer> deck, int n) {
         Random rand = new Random();
-        List<Integer> rolls = new ArrayList<Integer>();
-        for(int i : baseRolls) {
-            rolls.add(i);
+        for(;n>0;n--) {
+            for (int i = deck.size() - 1; i >= 0; i--) {
+                int shuffle = rand.nextInt(i + 1);
+                int temp = deck.get(i);
+                deck.set(i, deck.get(shuffle));
+                deck.set(shuffle, temp);
+            }
         }
-        for(int i = rolls.size()-1; i >= 0; i--) {
-            int shuffle = rand.nextInt(i + 1);
-            int temp = rolls.get(i);
-            rolls.set(i, rolls.get(shuffle));
-            rolls.set(shuffle, temp);
-        }
-        return rolls;
     }
 
 
@@ -84,10 +89,11 @@ public class CardStack extends Activity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.menu_reset) {
             new AlertDialog.Builder(this)
+                    .setTitle(R.string.menu_reset_title)
                     .setPositiveButton(R.string.menu_reset_pos, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            rolls = fisherYates(baseRolls);
+                            reset();
                             ((TextView) findViewById(R.id.flippedCardsTextView)).setText("");
                         }
                     })
