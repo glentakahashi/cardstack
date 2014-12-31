@@ -28,7 +28,8 @@
             android:inputType="number"
             android:width="@dimen/edit_text"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
-            android:gravity="end" />
+            android:gravity="end"
+            android:hint="@string/numDiceHint" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -56,7 +57,33 @@
             android:inputType="number"
             android:width="@dimen/edit_text"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
-            android:gravity="end" />
+            android:gravity="end"
+            android:hint="@string/numSidesHint" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/uniformLabel"
+            android:layout_gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/uniformCheckBox"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -84,7 +111,141 @@
             android:inputType="numberSigned"
             android:width="@dimen/edit_text"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:gravity="end"
+            android:hint="@string/numExtraHint" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/showShufflesLabel"
+            android:layout_gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/showShufflesCheckBox"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/showRemainingLabel"
+            android:layout_gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/showRemainingCheckBox"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/showAllRollsLabel"
+            android:layout_gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/showAllCheckBox"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/numToShowLabel"
+            android:layout_gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/numRollsEditText"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:inputType="number"
+            android:width="@dimen/edit_text"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
             android:gravity="end" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/keepScreenOnLabel"
+            android:layout_gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/keepScreenOnCheckBox"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true" />
 
     </RelativeLayout>
 

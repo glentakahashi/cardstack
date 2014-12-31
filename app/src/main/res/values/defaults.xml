@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="numDiceDefault">2</integer>
+    <integer name="numSidesDefault">6</integer>
+    <integer name="numExtraDefault">6</integer>
+    <bool name="showShufflesDefault">true</bool>
+    <bool name="keepScreenOnDefault">false</bool>
+    <integer name="numToShowDefault">-1</integer>
+    <bool name="showRemainingDefault">true</bool>
+    <bool name="uniformDistributionDefault">true</bool>
+</resources>

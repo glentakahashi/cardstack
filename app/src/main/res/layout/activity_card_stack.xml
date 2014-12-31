@@ -22,12 +22,16 @@
         android:layout_below="@+id/lastDrawnTextView" />
 
     <ScrollView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/scrollView"
         android:layout_below="@+id/flipButton"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="false">
+        android:layout_alignParentBottom="false"
+        android:layout_toLeftOf="@+id/scrollView2"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_alignParentLeft="true">
 
         <LinearLayout
             android:orientation="vertical"
@@ -39,6 +43,32 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/flippedCardsTextView"
+                android:gravity="center"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView2"
+        android:layout_alignParentBottom="false"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/flipButton"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentRight="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/remainingRollsTextView"
                 android:gravity="center"
                 android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small" />
         </LinearLayout>

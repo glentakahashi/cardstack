@@ -12,7 +12,22 @@
     <string name="dialog_settings_neg">Cancel</string>
     <string name="flip_button">Draw</string>
     <string name="numDiceLabel"># of dice</string>
+    <string name="numDiceHint">1-4</string>
     <string name="numSidesLabel"># of sides per die</string>
+    <string name="numSidesHint">1-12</string>
     <string name="numExtraLabel"># extra or reduced rolls</string>
+    <string name="numExtraHint">&#x00b1;100</string>
+    <string name="showShufflesLabel">Show shuffles</string>
+    <string name="keepScreenOnLabel">Keep screen on</string>
+    <string name="showAllRollsLabel">Show all rolls</string>
+    <string name="numToShowLabel"># of rolls to display</string>
+    <string name="showRemainingLabel">Show remaining rolls</string>
+    <string name="uniformLabel">Uniformly distribute extras</string>
+
+    <string name="confirmSettingsWarningText">Some values have changed which require a reset of the deck.
+        Click okay to reset or click cancel to return to settings and restore them to their previous values.
+        Your other settings will still be saved.</string>
+
+    <string name="prefsFile">com.glentaka.cardstack.PREFERENCES</string>
 
 </resources>
